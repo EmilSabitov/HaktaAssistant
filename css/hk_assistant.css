@@ -1,0 +1,17 @@
+#hk_assistant {position:fixed; bottom:50px; left:20px; z-index:50; font-size:0; font-weight:normal; background:url(../img/hk_assistant_helper.png) no-repeat 50% 50%;
+    background-size:cover; transition:all 0.5s linear; width:0; opacity:1; max-width: 135px; }
+#hk_assistant_bubble1 , #hk_assistant_bubble2{position:absolute; background-color:rgba(43,158,207,1); font-size:0; font-weight:normal; border-radius:50%;bottom:100%;transition:all 0.4s linear;}
+#hk_assistant_bubble1{ width:12px; left:90px; width:0;}
+#hk_assistant_bubble2{ width:24px; margin-bottom:18px; left:97px; width:0; }
+#hk_assistant:before ,#hk_assistant_bubble1:before,#hk_assistant_bubble2:before {content:""; display:inline-block; vertical-align:middle; width:0; padding-top:100%;}
+#hk_assistant_comment {background-color:#fff;  font:16px/18px "etelkaLight"; color:#070707;
+    position:absolute; bottom:100%; left:120px; margin-bottom:50px; overflow:hidden; transition:all 0.4s linear;
+    border:2px solid #2B9ECF; padding:0;  width:0; height:0; opacity:0; }
+#hk_assistant_comment_clone {background-color:#fff;  font:16px/18px "etelkaLight"; color:#070707;
+    border:2px solid #2B9ECF; border-radius:14px; padding: 14px; width:246px; left:-3000px; position:absolute; top:0;}
+#hk_assistant.active {
+    width:168px; opacity:1; }
+#hk_assistant_comment_close  {width:14px; height:14px; position:absolute; top:7px; right:7px; background:url(../img/hk_assistant_cross_blue.png) no-repeat 50% 50% ;cursor:pointer; }
+
+
+.hk_assistant_help { cursor:help; }

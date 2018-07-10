@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hakta Assistant Example</title>
+    <link href="css/hk_assistant.css" rel="stylesheet">
+</head>
+<body>
+<div>
+<h2 class="hk_assistant_help" data-hk-help="We can show help here">Assistant Example</h2>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/hk_assistant.js"></script>
+<script type="text/javascript">
+	let assistant = new HKAssistant;
+	assistant.init();
+	assistant.activate();
+</script>
+</body>
+</html>
