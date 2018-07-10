@@ -2,19 +2,19 @@
 Hakta Assistant by Emil Sabitov (Hakta)
 Version: 0.5
  */
-var HKAssistant = (function () {
+let HKAssistant = (function () {
 	'use strict';
-	var self = this;
-	var bubble1 , bubble2 , assistant , comment , comment_clone , assistant_comment_close , assistant_comment_text;
-	var was_turned_off = false;
-	var messages = {
-		hello : "Hi! Don't worry. I will help you to use this site. You can hover element and i will suggest you." ,
-		self_help : "Yeah. It's me. Hi :)"
-	};
-	self.init = function (hello_message) {
+	let self = this ,
+		bubble1 , bubble2 , assistant , comment , comment_clone , assistant_comment_close , assistant_comment_text ,
+		was_turned_off = false ,
+		messages = {
+			hello : "Hi! Don't worry. I will help you to use this site. You can hover element and i will suggest you." ,
+			self_help : "Yeah. It's me. Hi :)"
+		};
+	self.init = function ( hello_message ) {
 		createAssistantBlock();
 		findBlocksForHelp();
-		if (hello_message ){
+		if ( hello_message ) {
 			messages.hello = hello_message
 		}
 	};
@@ -33,9 +33,9 @@ var HKAssistant = (function () {
 		comment_clone.text( message );
 		showMessageBlock();
 	};
-	var
+	let
 		createAssistantBlock = function () {
-			assistant = $( '<div id="hk_assistant" class="hk_assistant_help" data-hk-help="'+messages.self_help+'">' );
+			assistant = $( '<div id="hk_assistant" class="hk_assistant_help" data-hk-help="' + messages.self_help + '">' );
 			bubble1 = $( '<div id="hk_assistant_bubble1"></div>' );
 			bubble2 = $( '<div id="hk_assistant_bubble2"></div>' );
 			assistant_comment_text = $( '<p id="hk_assistant_comment_text"></p>' );
@@ -52,19 +52,19 @@ var HKAssistant = (function () {
 
 			$( 'body' ).append( assistant );
 
-			assistant_comment_close.on( 'click' , function (event) {
+			assistant_comment_close.on( 'click' , function ( event ) {
 				was_turned_off = true;
 				hideMessageBlock();
 				event.preventDefault();
 				event.stopPropagation();
 			} );
-			assistant.on('click', function (event) {
+			assistant.on( 'click' , function ( event ) {
 				was_turned_off = false;
 				showMessageBlock();
 
 				event.preventDefault();
 				event.stopPropagation();
-			})
+			} )
 		} ,
 		findBlocksForHelp = function () {
 
